@@ -1,0 +1,25 @@
+{%  extends 'base.html' %}
+
+{% block content%}
+<head>
+    <title>More - Details</title>
+</head>
+<body>
+    <div>
+    <h2>Device Type          : &nbsp; &nbsp; &nbsp;    {{DeviceType}}</h1>
+    <p>MAC Address   &nbsp; &nbsp;     :  &nbsp;    {{Id}}</p>
+    <p>Device Version      &nbsp;   :  &nbsp;    {{DeviceVersion}}</p>
+    <p>Last contact      &nbsp; &nbsp; &nbsp; &nbsp;   :  &nbsp;    {{LastContact}}</p>
+    <p>Status        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;    :  &nbsp;    {{Status}}</p>
+    <p>Device Location     &nbsp; &nbsp; :  &nbsp;    {{DeviceLocation}}</p>
+    <p>Primary Group       &nbsp; &nbsp;  :  &nbsp;    {{PrimaryGroup}}</p>
+    <p>Secondary Group      &nbsp; &nbsp;  :  &nbsp;    {{SecondaryGroup}}</p>
+    <p>Registerd By        &nbsp; &nbsp;  -  &nbsp;    In_Progress</p>
+    <p>Registerd on         &nbsp;  -  &nbsp;    {{RegistrationTime}}</p>
+
+    <a href="/edit?Id={{Id}}">Edit</a>
+    <a href="/delete?Id={{Id}}">Delete</a>
+    </div>
+    </body>
+
+{% endblock %}

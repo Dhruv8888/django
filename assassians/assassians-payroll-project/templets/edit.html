@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+<div>
+    <form action="/">
+    <input type="submit" value="<< Back">
+    </form>
+    <form action="/RecordEdited" method="POST">
+        {% csrf_token %}
+        <h3>MAC Address  <input required autofocus type="text" name="Id" id="Id" value="{{Id}}"></h3>
+        <h3>Device Type  <input required type="text" name="DeviceType" id="DeviceType" value="{{DeviceType}}"></h3>
+        <h3>Device version  <input required type="text" name="DeviceVersion" id="DeviceVersion" value="{{DeviceVersion}}"></h3>
+        <h3>Location  <input required type="text" name="DeviceLocation" id="DeviceLocation" value="{{DeviceLocation}}"></h3>
+        <h3>Primary Group  <input type="text" name="PrimaryGroup" id="PrimaryGroup" value="{{PrimaryGroup}}"></h3>
+        <h3>Secondary Group  <input type="text" name="SecondaryGroup" id="SecondaryGroup" value="{{SecondaryGroup}}"></h3>
+        <input type="submit" value="Save Changes">
+    </form>
+</div>        
+{% endblock %}

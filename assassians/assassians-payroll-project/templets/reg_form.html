@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<body>
+    {{msg}}
+    <form action="{% url 'saveData' %}" method="POST" >
+            {% csrf_token %}
+            <h3>MAC Address  <input required autofocus type="text" name="Id" id="Id"></h3>
+            <h3>Device Type  <input required type="text" name="DeviceType" id="DeviceType"></h3>
+            <h3>Device version  <input required type="text" name="DeviceVersion" id="DeviceVersion"></h3>
+            <h3>Location  <input required type="text" name="DeviceLocation" id="DeviceLocation"></h3>
+            <h3>Primary Group  <input type="text" name="PrimaryGroup" id="PrimaryGroup"></h3>
+            <h3>Secondary Group  <input type="text" name="SecondaryGroup" id="SecondaryGroup"></h3>
+            <!-- <h3>Your Name  <input required type="text" name="CreatedBy" id="EmpId"></h3>  now we are commenting this because name of employee automaticall saved from his login data--> 
+
+            {% comment %} <button id="submitForm" type = "submit"> Register Device"</button> {% endcomment %}
+            <input type="submit"value="Register Device">
+
+        </form>
+       
+</body>
+
+{% endblock  %}
